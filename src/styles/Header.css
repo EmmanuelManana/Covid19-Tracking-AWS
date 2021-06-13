@@ -1,0 +1,18 @@
+.header{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    /* flex-direction: column; */
+    justify-content: space-evenly;
+    background: rgba(111, 111, 149, 0.876);
+  }
+
+  .app__dropdown{
+    background-color: whitesmoke;
+    border-radius: 5px;
+    border: none;
+    margin-left: 2000px;
+  }
+  
+
+ 

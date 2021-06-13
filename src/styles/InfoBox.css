@@ -1,0 +1,11 @@
+.infoBox{
+    display: flex;
+    align-items: center;
+    width: 95%;
+}
+
+@media (max-width: 990px) {
+    .infoBox{
+        width: 25%;
+    }
+}

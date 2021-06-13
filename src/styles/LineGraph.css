@@ -1,0 +1,9 @@
+.lineGraph{
+    height: 40vh;
+}
+
+@media (max-width: 990px) {
+    .lineGraph{
+        display: none;
+    }
+}
