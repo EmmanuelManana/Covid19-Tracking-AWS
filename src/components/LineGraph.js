@@ -28,7 +28,7 @@ const options = {
       {
         type: "time",
         time: {
-          format: "MM/DD/YY",
+          format: "DD/MM/YY",
           tooltipFormat: "ll",
         },
       },
@@ -49,7 +49,7 @@ const options = {
   },
 };
 
-const LineGraph = () => {
+const LineGraph = ({ casesType }) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -58,23 +58,31 @@ const LineGraph = () => {
       fetch(url)
         .then((response) => response.json())
         .then((data) => {
-          setData(buildChartData(data));
+          setData(buildChartData(data, casesType));
         });
 
     getGraphData();
-  }, []);
+  }, [casesType]);
 
-  console.log("data to plot:", data);
+  // console.log("data to plot:", data);
 
   return (
     <div className="lineGraph">
-      <Line
-        style={{ height: "100%" }}
-        data={{
-          datasets: [{ data: data }],
-        }}
-        //   options
-      />
+      {data?.length > 0 && (
+        <Line
+          style={{ height: "100%" }}
+          data={{
+            datasets: [
+              {
+                backgroundColor: "orange",
+                borderColor: "orange",
+                data: data,
+              },
+            ],
+          }}
+          options={options}
+        />
+      )}
     </div>
   );
 };

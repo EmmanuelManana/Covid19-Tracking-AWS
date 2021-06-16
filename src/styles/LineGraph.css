@@ -1,5 +1,6 @@
 .lineGraph{
-    height: 40vh;
+    height: 100%;
+    width: 100%;
 }
 
 @media (max-width: 990px) {
