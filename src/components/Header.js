@@ -64,7 +64,7 @@ const Header = ({ countries, fetchDataFromChild }) => {
       <FormControl className="app__dropdown">
         <Select variant="outlined" value={country} onChange={onCountryChange}>
           <MenuItem value="Worldwide" key="Worldwide">
-            Worldwide
+            Globaly
           </MenuItem>
           {countries &&
             countries.map((country, i) => (
@@ -74,7 +74,7 @@ const Header = ({ countries, fetchDataFromChild }) => {
             ))}
         </Select>
       </FormControl>
-      <h1>Covid-19 Tracker</h1>
+      <h1>Covid-19 updates</h1>
     </div>
   );
 };
