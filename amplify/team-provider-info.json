@@ -1,0 +1,26 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-covid19trackingaws-dev-180307-authRole",
+      "UnauthRoleArn": "arn:aws:iam::942416325585:role/amplify-covid19trackingaws-dev-180307-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::942416325585:role/amplify-covid19trackingaws-dev-180307-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-covid19trackingaws-dev-180307-deployment",
+      "UnauthRoleName": "amplify-covid19trackingaws-dev-180307-unauthRole",
+      "StackName": "amplify-covid19trackingaws-dev-180307",
+      "StackId": "arn:aws:cloudformation:us-east-1:942416325585:stack/amplify-covid19trackingaws-dev-180307/5a2bb740-cebc-11eb-959d-0afa5528cb21",
+      "AmplifyAppId": "d1zxdrjhlsakqt"
+    },
+    "categories": {
+      "auth": {
+        "covid19trackingawsf6f0197f": {}
+      },
+      "function": {
+        "covidUpdatesFunction": {
+          "deploymentBucketName": "amplify-covid19trackingaws-dev-180307-deployment",
+          "s3Key": "amplify-builds/covidUpdatesFunction-2b794864706279395277-build.zip"
+        }
+      }
+    }
+  }
+}

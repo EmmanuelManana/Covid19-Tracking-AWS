@@ -1,0 +1,35 @@
+{
+  "paths": [
+    {
+      "name": "/updates",
+      "lambdaFunction": "covidUpdatesFunction",
+      "privacy": {
+        "open": true
+      },
+      "policyResourceName": "/updates"
+    }
+  ],
+  "resourceName": "covidUpdates",
+  "apiName": "covidUpdates",
+  "functionArns": [
+    {
+      "lambdaFunction": "covidUpdatesFunction"
+    }
+  ],
+  "privacy": {
+    "auth": 0,
+    "unauth": 0,
+    "authRoleName": "amplify-covid19trackingaws-dev-180307-authRole",
+    "unAuthRoleName": "amplify-covid19trackingaws-dev-180307-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "covidUpdatesFunction",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    }
+  ]
+}

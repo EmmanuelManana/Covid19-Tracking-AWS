@@ -1,0 +1,7 @@
+{
+    "tableName": "covidupdates",
+    "partitionKeyName": "country",
+    "partitionKeyType": "S",
+    "sortKeyName": "allCountries",
+    "sortKeyType": "S"
+}

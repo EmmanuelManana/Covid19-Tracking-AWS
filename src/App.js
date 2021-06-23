@@ -11,6 +11,11 @@ import LineGraph from "./components/LineGraph.js";
 import { sortData } from "./utils/utils";
 import "leaflet/dist/leaflet.css";
 import { useStateValue } from "./components/context/StateProvider";
+import Amplify from "aws-amplify"
+import config from './aws-exports'
+import {withAuthenticator, AmplifySignOut} from "@aws-amplify/ui-react"
+
+Amplify.configure(config)
 
 function App() {
   const [countries, setCountries] = useState([]);
@@ -67,8 +72,9 @@ function App() {
       // BEN naming convernsion
       <div className="app">
         <Header countries={countries} />
-
+        <AmplifySignOut />
         <div className="app__container">
+          
           <div className="app__left">
             {/* infoBoxes */}
             <div className="app__stats">
@@ -105,11 +111,13 @@ function App() {
             {/* map */}
             <h3>Cases by country</h3>
             <Table tableData={tableData} />
+            
           </Card>
+          
         </div>
       </div>
     );
   }
 }
 
-export default App;
+export default withAuthenticator(App);
